@@ -1,0 +1,40 @@
+def presentacion():
+    """
+    Función que muestra la presentación del juego.
+    """
+    print("Bienvenido al juego de decisiones.")
+    print("En este juego, tomarás decisiones que afectarán el resultado de la historia.")
+    print("¡Que empiece la aventura!\n")
+
+def decision_1():
+    """
+    Función que maneja la primera decisión del jugador.
+    """
+    print("Has llegado a una encrucijada. ¿Qué camino eliges?")
+    decision = input("1. Ir hacia la izquierda\n2. Ir hacia la derecha\n")
+
+    if decision == "1":
+        print("Has elegido ir hacia la izquierda.")
+        final_decision_1()  # Llama a la función para el final del camino izquierdo
+    elif decision == "2":
+        print("Has elegido ir hacia la derecha.")
+        final_decision_2()  # Llama a la función para el final del camino derecho
+    else:
+        print("¡Opción inválida! Por favor, elige 1 o 2.")
+        decision_1()  # Vuelve a llamar a esta función si la entrada es inválida
+
+def final_decision_1():
+    """
+    Función que muestra el resultado de la decisión 1.
+    """
+    print("¡Felicidades! Has llegado al final del camino izquierdo.")
+
+def final_decision_2():
+    """
+    Función que muestra el resultado de la decisión 2.
+    """
+    print("¡Felicidades! Has llegado al final del camino derecho.")
+
+# Inicia el juego llamando a la función principal
+presentacion()
+decision_1()
